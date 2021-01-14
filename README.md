@@ -1,4 +1,4 @@
-# Run a SFTP server with AWS S3 storage in Kubernetes
+# Run a SFTP server with IBM CLOUD Object storage in Kubernetes
 
 
 

@@ -12,7 +12,7 @@ echo $AWS_ACCESSKEY:$AWS_SECRETKEY > /s3credentials
 chmod 600 /s3credentials
 
 mkdir -p /mnt/s3
-s3fs $S3_BUCKET:$S3_KEY /mnt/s3 -o passwd_file=/s3credentials -o url=http{s}://s3.us-south.cloud-object-storage.appdomain.cloud -o allow_other -o uid=$(id -u $SFTP_USER)
+s3fs $S3_BUCKET:$S3_KEY /mnt/s3 -o passwd_file=/s3credentials -o url=https://s3.us-south.cloud-object-storage.appdomain.cloud -o allow_other -o uid=$(id -u $SFTP_USER)
 
 ln -s /mnt/s3 /home/$SFTP_USER
 
