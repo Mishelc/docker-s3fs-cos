@@ -1,8 +1,8 @@
 all: build-secrets deploy-secrets deploy-s3fs
 
 build-secrets:
-	sed  "s#AWS_ACCESS_KEY_ID#`printf ${AWS_ACCESS_KEY_ID} |base64`#;	\
-	s#AWS_SECRET_ACCESS_KEY#`printf ${AWS_SECRET_ACCESS_KEY} |base64`#; \
+	sed  "s#COS_ACCESS_KEY_ID#`printf ${COS_ACCESS_KEY_ID} |base64`#;	\
+	s#COS_SECRET_ACCESS_KEY#`printf ${COS_SECRET_ACCESS_KEY} |base64`#; \
 	s#SFTP_USER#`printf ${SFTP_USER} |base64`#; \
 	s#SFTP_PASSWORD#`printf ${SFTP_PASSWORD} |base64`#; \
 	s#S3_BUCKET#`printf ${S3_BUCKET} |base64`#; \

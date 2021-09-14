@@ -5,8 +5,8 @@
 
 ## Run in Kubernetes
 ```
-export AWS_ACCESS_KEY_ID=xxxxx
-export AWS_SECRET_ACCESS_KEY=xxxx
+export COS_ACCESS_KEY_ID=xxxxx
+export COS_SECRET_ACCESS_KEY=xxxx
 export SFTP_USER=admin
 export SFTP_PASSWORD=password
 export SSH_KEY=~/.ssh/id_rsa.pub
