@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: s3fs-app
-        image: kubernetesio/s3fs
+        image: mishelc/s3fs-cos
         securityContext:
           privileged: true
         ports:
@@ -52,17 +52,4 @@ spec:
             secretKeyRef:
               name: s3fs-secret
               key: ssh_key
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: s3fs-svc
-spec:
-  ports:
-  - port: 22
-    targetPort: 22
-    nodePort: 30022
-    protocol: TCP
-  type: NodePort
-  selector:
-    k8s-app: s3fs-app
+
